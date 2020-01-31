@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="https://www.eposnowhq.com/scripts/app/EposnowJSAPI.min.js"> </script>
+    
+    <title>EposNow JS API Tester</title>
+</head>
+<body> <!-- onload="load();"-->
+
+<div class="row">
+  <div class="columnLeft">
+    <div class="summary">
+    <div id = "list" class="list">
+        <li class="cardUsed">CREDIT ... 8123</li>
+        <li class="amtCharged">$103.00</li>
+    </div>
+        <hr>
+        <div class = "amtDueLabel">AMOUNT DUE</div>
+        <div class = "amtDue" id="amtDue">$0.00</div>
+
+    </div>
+  </div>
+  <div class="columnRight">
+    <input id="tbInput" type="text" value="$"/>
+    <table id="keypad">
+        <tr>
+            <td onclick="input('1');">1</td>
+            <td onclick="input('2');">2</td>
+            <td onclick="input('3');">3</td>
+        </tr>
+        <tr>
+            <td onclick="input('4');">4</td>
+            <td onclick="input('5');">5</td>
+            <td onclick="input('6');">6</td>
+        </tr>
+        <tr>
+            <td onclick="input('7');">7</td>
+            <td onclick="input('8');">8</td>
+            <td onclick="input('9');">9</td>
+        </tr>
+        <tr>
+            <td onclick="input('.');">.</td>
+            <td onclick="input('0');">0</td>
+            <td onclick="del();">DEL</td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+    
+    <div> 
+    <button onclick="charge(1,tbInput.value)">Debit</button>
+    <button onclick="charge(2,tbInput.value)">Credit</button>
+    </div>
+
+    <br/>
+
+    <h1>EPOS JS API Test</h1>
+
+    <h4>deviceID</h4>
+    <p id="deviceID"></p>
+    <h4>locationID</h4>
+    <p id="locationID"></p>
+    <h4>staffID</h4>
+    <p id="staffID"></p>
+    <h4>customerID</h4>
+    <p id="customerID"></p>
+    <h4>transTotal</h4>
+    <p id="transTotal"></p>
+    <h4>transRemaining</h4>
+    <p id="transRemaining"></p>
+    <h4>transProducts</h4>
+    <p id="transProducts"></p>
+    <h4>tillData</h4>
+    <p id="tillData"></p>
+    <h4>tender</h4>
+    <p id="tender"></p>
+    <h4>transDetail</h4>
+    <p id="transDetail"></p>
+    <h4>discount</h4>
+    <p id="discount"></p>
+
+    <br/>
+    
+</body>
+</html>

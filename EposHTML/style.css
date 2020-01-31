@@ -1,0 +1,132 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+      text-align:center; 
+      background-color:#0175a8; 
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  table {
+      border-collapse: collapse;
+  }
+  table td, table th {
+      border: 1px solid #263238;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+      border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+      border-right: 0;
+  }
+  button {
+      text-transform: uppercase;
+      height: 3.5rem;
+      width: 16rem;
+      font-size: .9rem;
+      border: none;
+      border-radius: 4px;
+      background: #00B5FA;
+      color: #fff;
+      padding: 0 1rem;
+      cursor: pointer;
+      text-align: center;
+      margin: 1rem;
+  }
+  li {
+      list-style-type:none;
+  }
+  .row {
+      display: inline-flex;
+      flex-direction: row;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: stretch;
+  }
+  .columnLeft {/*
+    float: left;
+    width: 45%;
+    height: 350px;*/
+    padding: 10px;
+  }
+  .columnRight {/*
+    float: left;
+    width: 55%;
+    height: 350px;*/
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
+      height: 240px;
+      overflow: hidden;
+      overflow-y: scroll;
+      list-style-type:none;
+      padding:5px;
+  }
+  .summary {
+      height: 330px;
+      width: 15rem;
+      padding: 1rem 1rem 1rem;
+      background-color: #fff;
+      color: #616161;
+      text-align: left;
+      float: right;
+  }
+  .cardUsed {
+      line-height: 1;
+      font-size: .8rem;
+      color: rgb(135, 135, 135);
+      float: left; 
+      text-align: left;
+  }
+  .amtCharged {
+      line-height: 2.5;
+      font-size: 1rem;
+      color: rgb(115, 115, 115);
+      float: right; 
+      text-align: right;
+  }
+  .amtDueLabel {
+      color: rgb(135, 135, 135);
+      line-height: 2;
+      font-size: .9rem; 
+      float: left; 
+      text-align: left;
+      padding-right: 10px;
+  }
+  .amtDue {
+      color: rgba(115, 115, 115);
+      line-height: 2;
+      font-size: 1.1rem; 
+      float: right; 
+      text-align: right;
+      padding-left: 10px;
+  }
+  #tbInput{
+      text-align: right;
+      font-size: 2.25rem;
+      width: 20rem;
+      height: 66px;
+      background-color: #fff;
+      padding: 0 1.5rem;
+      color: #666;
+      letter-spacing: 2px;
+      float: left;
+  }
+  #keypad {width: 20rem;float: left;}
+  
+  #keypad tr td {
+      vertical-align:middle; 
+      text-align:center; 
+      font-size:1.4rem; 
+      font-weight:bold; 
+      width:95px; 
+      height:66px; 
+      cursor:pointer; 
+      background-color: #37474F; 
+      color:#fff;}
+  #keypad tr td:hover {background-color:#455A64; color:#fff;}
+  

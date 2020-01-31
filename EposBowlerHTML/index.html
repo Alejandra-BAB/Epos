@@ -1,0 +1,74 @@
+<html>
+<head>
+    <link href="https://www.eposnowhq.com/Styles/BackOffice/backoffice2.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://www.eposnowhq.com/Scripts/App/EposNowJSApi.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <title>EposNow JS App Template</title>
+    <script type="text/template" id="tpl-customers">
+        <div>
+            <table class="Grid" style="margin:0 auto;">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Birthday</th>
+                        <th>Bowler ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% _.each( target, function(customer) {%>
+                    <tr>
+                        <td><button class="select-button" onclick="openForm()">SELECT</button></td>
+                        <td><%= customer.Full_Name %></td>
+                        <td><%= customer.Email == null ? "" : customer.Email %></td>
+                        <td><%= customer.Phone == null ? "" : customer.Phone %></td>
+                        <td><%= customer.Date_of_Birth == null ? "" : customer.Date_of_Birth %></td>
+                        <td><%= customer.Bowler_ID == null ? "" : customer.Bowler_ID %></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </script>
+</head>
+<body>
+<div id = "app-container"> 
+    <div class = "customer-selection">
+        <div class = "customer-selection-header">
+            <div class = "customer-selection-title">Customers</div>
+        </div>
+        <div class = "customer-selection-search">
+                <label for="search" class="customer-search-label">Search Customers</label>
+                <div class = "inline">
+                    <input type="text" id="search" class="customer-selection-input" placeholder=" Email, BowlerID, DOB, etc." value="">
+                    <button class="customer-search-button" onclick="searchCustomers();">Search</button>
+                </div>
+            
+        </div>
+    <hr />
+    <div id="searchResult">
+    </div>
+</div>
+</div>
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+</body>
+</html>
